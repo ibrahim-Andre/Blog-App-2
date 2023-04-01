@@ -1,9 +1,33 @@
-import React from 'react'
-
+import React from "react";
+const navLinks = [
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "Blog",
+    path: "/blog",
+  },
+  {
+    title: "Contact Us",
+    path: "/contact-us",
+  },
+  {
+    title: "Login",
+    path: "/login",
+  },
+];
 const Navigation = () => {
   return (
-    <nav>Navigation</nav>
-  )
-}
+    <nav className="site-navigation">
+      <span>My React Blog</span>
+      <ul>
+        {navLinks.map((link, index) => (
+          <li key={index}>{link.title}</li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
-export default Navigation
+export default Navigation;
